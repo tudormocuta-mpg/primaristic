@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primaristic design system — calm, medical tones */
+    --background: 195 33% 95%;       /* #EFF5F7 */
+    --foreground: 195 25% 22%;       /* #2C3E44 */
+
+    --card: 0 0% 100%;               /* #FFFFFF */
+    --card-foreground: 195 25% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 25% 22%;
+
+    --primary: 195 22% 44%;          /* #5B7E8A */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 195 22% 88%;        /* light blue-gray */
+    --secondary-foreground: 195 25% 22%;
+
+    --muted: 195 20% 92%;
+    --muted-foreground: 195 18% 47%; /* #6B8590 */
+
+    --accent: 96 26% 49%;            /* #7A9E5F */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 195 25% 85%;           /* #CDDFE4 */
+    --input: 195 25% 85%;
+    --ring: 195 22% 44%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
