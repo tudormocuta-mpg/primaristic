@@ -11,23 +11,24 @@ export function ContactCTA({
   description = "Suntem aici pentru a răspunde întrebărilor tale despre PRIMARISTICA® și despre cum te poate ajuta.",
 }: ContactCTAProps) {
   return (
-    <section className="relative overflow-hidden border-t border-border bg-primary/5 py-20">
-      {/* Subtle background pattern */}
+    <section className="relative overflow-hidden bg-primary py-20">
+      {/* Decorative elements */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-grain opacity-30" />
+        <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-black/10 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-3xl px-4 text-center">
-        <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+        <h2 className="font-display text-3xl font-normal text-white md:text-4xl">
           {title}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-lg font-light text-muted-foreground">
+        <p className="mx-auto mt-4 max-w-xl text-lg font-light text-white/85">
           {description}
         </p>
-        <div className="mt-8">
+        <div className="mt-10">
           <Button
             asChild
             size="lg"
-            className="h-14 rounded-full px-10 shadow-lg shadow-primary/10"
+            className="h-14 rounded-full bg-white px-10 font-bold text-primary shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/90"
           >
             <Link href="/contact">Contactează-ne</Link>
           </Button>

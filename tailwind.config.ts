@@ -23,8 +23,8 @@ const config: Config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          dark: "#3D5A64",
-          light: "#B8D0D8",
+          dark: "#3E6B62",
+          light: "#B8D8D0",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -53,6 +53,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-lato)", "system-ui", "sans-serif"],
+        display: ["var(--font-dm-serif)", "serif"],
       },
     },
   },

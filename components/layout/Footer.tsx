@@ -20,7 +20,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <LogoIcon />
-              <p className="text-lg font-bold text-foreground">
+              <p className="font-display text-lg text-foreground">
                 PRIMARISTICA<sup className="text-xs">®</sup>
               </p>
             </div>
@@ -31,7 +31,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="mb-4 text-sm font-bold text-foreground">
+            <p className="mb-4 text-xs font-bold uppercase tracking-wider text-foreground">
               Navigare
             </p>
             <ul className="space-y-3">
@@ -50,7 +50,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="mb-4 text-sm font-bold text-foreground">
+            <p className="mb-4 text-xs font-bold uppercase tracking-wider text-foreground">
               Contact
             </p>
             <ul className="space-y-3 text-sm font-light text-muted-foreground">

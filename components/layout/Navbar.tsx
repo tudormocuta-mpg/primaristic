@@ -26,7 +26,7 @@ export function Navbar() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <LogoIcon />
-          <span className="text-xl font-bold tracking-wide text-primary">
+          <span className="font-display text-xl tracking-wider text-foreground">
             PRIMARISTICA<sup className="text-xs">®</sup>
           </span>
         </Link>

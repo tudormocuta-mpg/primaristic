@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(195,33%,93%)] via-[hsl(195,25%,90%)] to-[hsl(195,20%,88%)] py-20 md:py-28 lg:py-36">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(30,33%,95%)] via-[hsl(30,25%,93%)] to-[hsl(160,15%,91%)] py-20 md:py-28 lg:py-36">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-[5%] -top-[10%] h-[40rem] w-[40rem] rounded-full bg-primary/5 blur-[100px]" />
         <div className="absolute -bottom-[10%] -right-[5%] h-[35rem] w-[35rem] rounded-full bg-accent/5 blur-[80px]" />
@@ -21,7 +21,7 @@ export function HeroSection() {
           <span className="h-px w-8 bg-accent" />
         </div>
 
-        <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-7xl lg:leading-[1.1]">
+        <h1 className="font-display text-4xl tracking-tight text-foreground md:text-5xl lg:text-7xl lg:leading-[1.1]">
           <span className="italic text-primary">PRIMARISTICA</span>
           <sup className="text-lg md:text-xl">®</sup>
         </h1>

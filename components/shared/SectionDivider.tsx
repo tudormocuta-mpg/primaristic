@@ -10,7 +10,7 @@ export function SectionDivider() {
         <path
           d="M0,30 C200,30 250,15 450,15 C650,15 700,45 900,45 C1100,45 1150,30 1400,30"
           fill="none"
-          stroke="hsl(195 22% 44%)"
+          stroke="hsl(160 20% 45%)"
           strokeLinecap="round"
           strokeOpacity="0.2"
           strokeWidth="0.8"

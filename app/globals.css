@@ -4,34 +4,34 @@
 
 @layer base {
   :root {
-    /* Primaristic design system — calm, medical tones */
-    --background: 195 33% 95%;       /* #EFF5F7 */
-    --foreground: 195 25% 22%;       /* #2C3E44 */
+    /* Primaristic design system — warm, organic tones */
+    --background: 30 33% 95%;           /* #F7F3EE cream */
+    --foreground: 20 8% 21%;            /* #3B3632 warm charcoal */
 
-    --card: 0 0% 100%;               /* #FFFFFF */
-    --card-foreground: 195 25% 22%;
+    --card: 0 0% 100%;                  /* #FFFFFF */
+    --card-foreground: 20 8% 21%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 195 25% 22%;
+    --popover-foreground: 20 8% 21%;
 
-    --primary: 195 22% 44%;          /* #5B7E8A */
+    --primary: 160 20% 45%;             /* #5A8A7E warm teal */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 22% 88%;        /* light blue-gray */
-    --secondary-foreground: 195 25% 22%;
+    --secondary: 160 15% 90%;           /* light warm teal */
+    --secondary-foreground: 20 8% 21%;
 
-    --muted: 195 20% 92%;
-    --muted-foreground: 195 18% 47%; /* #6B8590 */
+    --muted: 30 15% 93%;                /* warm off-white */
+    --muted-foreground: 20 8% 42%;      /* warm mid-gray */
 
-    --accent: 96 26% 49%;            /* #7A9E5F */
+    --accent: 22 44% 56%;               /* #C4835A terracotta */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 195 25% 85%;           /* #CDDFE4 */
-    --input: 195 25% 85%;
-    --ring: 195 22% 44%;
+    --border: 30 18% 85%;               /* warm gray border */
+    --input: 30 18% 85%;
+    --ring: 160 20% 45%;
 
     --radius: 0.5rem;
   }
@@ -53,6 +53,6 @@
 
 /* Line art decorative circles */
 .line-art-circle {
-  border: 1px solid hsl(195 22% 44% / 0.2);
+  border: 1px solid hsl(160 20% 45% / 0.2);
   border-radius: 50%;
 }
