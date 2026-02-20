@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { localePath } from "@/lib/i18n-utils";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  dict: Dictionary["home"]["hero"];
+  locale: Locale;
+}
+
+export function HeroSection({ dict, locale }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(30,33%,95%)] via-[hsl(30,25%,93%)] to-[hsl(160,15%,91%)] py-20 md:py-28 lg:py-36">
       <div className="pointer-events-none absolute inset-0">
@@ -16,7 +24,7 @@ export function HeroSection() {
         <div className="mb-6 inline-flex items-center gap-3">
           <span className="h-px w-8 bg-accent" />
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Cunoașterea și educarea dezvoltării senzo-motorii
+            {dict.tagline}
           </span>
           <span className="h-px w-8 bg-accent" />
         </div>
@@ -27,21 +35,41 @@ export function HeroSection() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg font-light text-muted-foreground md:text-xl">
-          Disciplină teoretică și practică, de interes general, necesară și
-          benefică tuturor vârstelor, fie că suntem sănătoși sau nu.
+          {dict.subtitle}
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Button asChild size="lg" className="h-14 rounded-full px-10 shadow-xl shadow-primary/10">
+          <Button
+            asChild
+            size="lg"
+            className="h-14 rounded-full px-10 shadow-xl shadow-primary/10"
+          >
             <Link href="#ce-este">
-              Descoperă metoda
-              <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              {dict.ctaPrimary}
+              <svg
+                className="ml-2 h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
               </svg>
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="h-14 rounded-full px-10">
-            <Link href="/profesori">Găsește un profesor</Link>
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="h-14 rounded-full px-10"
+          >
+            <Link href={localePath(locale, "/profesori")}>
+              {dict.ctaSecondary}
+            </Link>
           </Button>
         </div>
       </div>

@@ -8,8 +8,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Phone, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-export default function ContactPage() {
+interface ContactPageClientProps {
+  dict: Dictionary["contact"];
+  commonDict: Dictionary["common"];
+}
+
+export default function ContactPageClient({
+  dict,
+  commonDict,
+}: ContactPageClientProps) {
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -23,10 +32,10 @@ export default function ContactPage() {
       <div className="border-b border-border bg-card py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Contact
+            {dict.header.title}
           </h1>
           <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
-            Suntem aici pentru a răspunde întrebărilor tale despre PRIMARISTICA®
+            {dict.header.subtitle}
           </p>
         </div>
       </div>
@@ -36,64 +45,70 @@ export default function ContactPage() {
           {/* Contact form */}
           <div>
             <h2 className="mb-6 text-xl font-bold text-foreground">
-              Trimite-ne un mesaj
+              {dict.form.title}
             </h2>
 
             {submitted ? (
               <div className="rounded-lg border border-accent bg-accent/10 p-6 text-center">
                 <p className="font-medium text-foreground">
-                  Mulțumim pentru mesajul tău!
+                  {dict.form.successTitle}
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Te vom contacta în cel mai scurt timp.
+                  {dict.form.successText}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <Label htmlFor="nume">Nume *</Label>
+                  <Label htmlFor="nume">
+                    {dict.form.nameLabel} {dict.form.required}
+                  </Label>
                   <Input
                     id="nume"
                     name="nume"
                     required
-                    placeholder="Numele tău"
+                    placeholder={dict.form.namePlaceholder}
                     className="mt-1.5"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">
+                    {dict.form.emailLabel} {dict.form.required}
+                  </Label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     required
-                    placeholder="adresa@email.com"
+                    placeholder={dict.form.emailPlaceholder}
                     className="mt-1.5"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="telefon">Telefon (opțional)</Label>
+                  <Label htmlFor="telefon">{dict.form.phoneLabel}</Label>
                   <Input
                     id="telefon"
                     name="telefon"
                     type="tel"
-                    placeholder="07xx xxx xxx"
+                    placeholder={dict.form.phonePlaceholder}
                     className="mt-1.5"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="mesaj">Mesaj *</Label>
+                  <Label htmlFor="mesaj">
+                    {dict.form.messageLabel} {dict.form.required}
+                  </Label>
                   <Textarea
                     id="mesaj"
                     name="mesaj"
                     required
                     rows={5}
-                    placeholder="Scrie mesajul tău aici..."
+                    placeholder={dict.form.messagePlaceholder}
                     className="mt-1.5"
                   />
                 </div>
                 <Button type="submit" size="lg">
-                  Trimite mesajul
+                  {dict.form.submit}
                 </Button>
               </form>
             )}
@@ -102,7 +117,7 @@ export default function ContactPage() {
           {/* Contact info */}
           <div>
             <h2 className="mb-6 text-xl font-bold text-foreground">
-              Informații de contact
+              {dict.info.title}
             </h2>
             <div className="space-y-6">
               <div className="rounded-lg border border-border bg-card p-5">
@@ -121,14 +136,16 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="h-4 w-4 shrink-0" />
-                    <span>Program: {siteConfig.contact.schedule}</span>
+                    <span>
+                      {commonDict.schedule}: {commonDict.scheduleValue}
+                    </span>
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg border border-border bg-card p-5">
                 <p className="text-xs leading-relaxed text-muted-foreground">
-                  {siteConfig.copyright}
+                  {commonDict.copyright}
                 </p>
               </div>
             </div>

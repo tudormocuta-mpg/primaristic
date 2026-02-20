@@ -1,14 +1,20 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { localePath } from "@/lib/i18n-utils";
+import { defaultLocale, type Locale } from "@/i18n/config";
 
 interface ContactCTAProps {
   title?: string;
   description?: string;
+  locale?: Locale;
+  buttonLabel?: string;
 }
 
 export function ContactCTA({
   title = "Contactează-ne pentru informații",
   description = "Suntem aici pentru a răspunde întrebărilor tale despre PRIMARISTICA® și despre cum te poate ajuta.",
+  locale = defaultLocale,
+  buttonLabel = "Contactează-ne",
 }: ContactCTAProps) {
   return (
     <section className="relative overflow-hidden bg-primary py-20">
@@ -30,7 +36,7 @@ export function ContactCTA({
             size="lg"
             className="h-14 rounded-full bg-white px-10 font-bold text-primary shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/90"
           >
-            <Link href="/contact">Contactează-ne</Link>
+            <Link href={localePath(locale, "/contact")}>{buttonLabel}</Link>
           </Button>
         </div>
       </div>
