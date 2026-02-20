@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { PageHeader } from "@/components/shared/PageHeader";
 import ContactPageClient from "./ContactPageClient";
 
 export async function generateMetadata({
@@ -24,9 +25,12 @@ export default async function ContactPage({
   const dict = await getDictionary(locale);
 
   return (
-    <ContactPageClient
-      dict={dict.contact}
-      commonDict={dict.common}
-    />
+    <>
+      <PageHeader title={dict.contact.header.title} subtitle={dict.contact.header.subtitle} />
+      <ContactPageClient
+        dict={dict.contact}
+        commonDict={dict.common}
+      />
+    </>
   );
 }

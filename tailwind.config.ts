@@ -52,7 +52,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-lato)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-dm-serif)", "serif"],
       },
     },

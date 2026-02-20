@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato, DM_Serif_Display } from "next/font/google";
+import { Inter, DM_Serif_Display } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -7,10 +7,9 @@ import { locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import "../globals.css";
 
-const lato = Lato({
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "700"],
-  variable: "--font-lato",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -61,7 +60,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${lato.variable} ${dmSerif.variable} font-sans antialiased`}
+        className={`${inter.variable} ${dmSerif.variable} font-sans antialiased`}
       >
         <div className="flex min-h-screen flex-col">
           <Navbar locale={locale} dict={dict} />
