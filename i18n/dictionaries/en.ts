@@ -224,6 +224,13 @@ const en: Dictionary = {
         },
       ],
     },
+    community: {
+      title: "Our Community",
+      paragraphs: [
+        "We are more than a school – we are a growing family, united by the desire to bring balance and harmony into everyone\u2019s life.",
+        "Join a support network where every story matters and every step towards growth is celebrated together.",
+      ],
+    },
     profesoriPreview: {
       sectionLabel: "Teachers",
       title: "Who teaches us?",

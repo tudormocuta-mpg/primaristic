@@ -224,6 +224,13 @@ const fr: Dictionary = {
         },
       ],
     },
+    community: {
+      title: "Notre Communaut\u00E9",
+      paragraphs: [
+        "Nous sommes plus qu\u2019une \u00E9cole \u2013 nous sommes une famille en croissance constante, unie par le d\u00E9sir d\u2019apporter \u00E9quilibre et harmonie dans la vie de chacun.",
+        "Rejoignez un r\u00E9seau de soutien o\u00F9 chaque histoire compte et chaque pas vers l\u2019\u00E9volution est c\u00E9l\u00E9br\u00E9 ensemble.",
+      ],
+    },
     profesoriPreview: {
       sectionLabel: "Professeurs",
       title: "Qui nous enseigne\u00A0?",

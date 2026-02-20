@@ -224,6 +224,13 @@ const de: Dictionary = {
         },
       ],
     },
+    community: {
+      title: "Unsere Gemeinschaft",
+      paragraphs: [
+        "Wir sind mehr als eine Schule \u2013 wir sind eine wachsende Familie, vereint durch den Wunsch, Gleichgewicht und Harmonie in das Leben jedes Einzelnen zu bringen.",
+        "Werden Sie Teil eines Unterst\u00FCtzungsnetzwerks, in dem jede Geschichte z\u00E4hlt und jeder Schritt zur Entwicklung gemeinsam gefeiert wird.",
+      ],
+    },
     profesoriPreview: {
       sectionLabel: "Lehrer",
       title: "Wer unterrichtet uns?",

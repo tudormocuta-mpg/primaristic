@@ -224,6 +224,13 @@ const es: Dictionary = {
         },
       ],
     },
+    community: {
+      title: "Nuestra Comunidad",
+      paragraphs: [
+        "Somos m\u00E1s que una escuela \u2013 somos una familia en constante crecimiento, unida por el deseo de llevar equilibrio y armon\u00EDa a la vida de cada persona.",
+        "\u00DAnete a una red de apoyo donde cada historia importa y cada paso hacia la evoluci\u00F3n se celebra juntos.",
+      ],
+    },
     profesoriPreview: {
       sectionLabel: "Profesores",
       title: "¿Quién nos enseña?",

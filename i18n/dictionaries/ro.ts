@@ -222,6 +222,13 @@ const ro = {
         },
       ],
     },
+    community: {
+      title: "Comunitatea Noastră",
+      paragraphs: [
+        "Suntem mai mult decât o școală – suntem o familie în continuă creștere, unită de dorința de a aduce echilibru și armonie în viața fiecăruia.",
+        "Alătură-te unei rețele de suport unde fiecare poveste contează și fiecare pas spre evoluție este sărbătorit împreună.",
+      ],
+    },
     profesoriPreview: {
       sectionLabel: "Profesori",
       title: "Cine ne învață?",
