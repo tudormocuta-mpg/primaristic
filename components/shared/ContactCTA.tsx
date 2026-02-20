@@ -8,7 +8,7 @@ interface ContactCTAProps {
 
 export function ContactCTA({
   title = "Contactează-ne pentru informații",
-  description = "Suntem aici pentru a răspunde întrebărilor tale despre PRIMARISTIC® și despre cum te poate ajuta.",
+  description = "Suntem aici pentru a răspunde întrebărilor tale despre PRIMARISTICA® și despre cum te poate ajuta.",
 }: ContactCTAProps) {
   return (
     <section className="relative overflow-hidden border-t border-border bg-primary/5 py-20">

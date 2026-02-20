@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(195,33%,93%)] via-[hsl(195,25%,90%)] to-[hsl(195,20%,88%)] py-20 md:py-28 lg:py-36">
-      {/* Background decorative elements */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-[5%] -top-[10%] h-[40rem] w-[40rem] rounded-full bg-primary/5 blur-[100px]" />
         <div className="absolute -bottom-[10%] -right-[5%] h-[35rem] w-[35rem] rounded-full bg-accent/5 blur-[80px]" />
@@ -17,50 +16,31 @@ export function HeroSection() {
         <div className="mb-6 inline-flex items-center gap-3">
           <span className="h-px w-8 bg-accent" />
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Abordare clinică dovedită
+            Cunoașterea și educarea dezvoltării senzo-motorii
           </span>
           <span className="h-px w-8 bg-accent" />
         </div>
 
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-7xl lg:leading-[1.1]">
-          <span className="italic text-primary">Dezvoltare</span> senzo-motorie
-          <span className="mt-2 block">la orice vârstă.</span>
+          <span className="italic text-primary">PRIMARISTICA</span>
+          <sup className="text-lg md:text-xl">®</sup>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg font-light text-muted-foreground md:text-xl">
-          PRIMARISTIC® analizează și susține dezvoltarea senzo-motorie normală —
-          temelia funcționării echilibrate a întregului organism.
+          Disciplină teoretică și practică, de interes general, necesară și
+          benefică tuturor vârstelor, fie că suntem sănătoși sau nu.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="h-14 rounded-full px-10 shadow-xl shadow-primary/10"
-          >
-            <Link href="/primaristic">
-              Află mai mult
-              <svg
-                className="ml-2 h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
+          <Button asChild size="lg" className="h-14 rounded-full px-10 shadow-xl shadow-primary/10">
+            <Link href="#ce-este">
+              Descoperă metoda
+              <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </Link>
           </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="h-14 rounded-full px-10"
-          >
+          <Button asChild variant="outline" size="lg" className="h-14 rounded-full px-10">
             <Link href="/profesori">Găsește un profesor</Link>
           </Button>
         </div>

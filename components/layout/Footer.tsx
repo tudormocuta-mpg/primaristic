@@ -21,7 +21,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <LogoIcon />
               <p className="text-lg font-bold text-foreground">
-                PRIMARISTIC<sup className="text-xs">®</sup>
+                PRIMARISTICA<sup className="text-xs">®</sup>
               </p>
             </div>
             <p className="mt-4 text-sm font-light text-muted-foreground">

@@ -8,7 +8,7 @@ import { evenimente } from "@/data/evenimente";
 export const metadata: Metadata = {
   title: "Evenimente",
   description:
-    "Evenimente PRIMARISTIC® — seminare, workshopuri și conferințe despre dezvoltarea senzo-motorie.",
+    "Evenimente PRIMARISTICA® — congrese, seminare și conferințe despre dezvoltarea senzo-motorie.",
 };
 
 export default function EvenimentePage() {
@@ -19,7 +19,7 @@ export default function EvenimentePage() {
     <>
       <PageHeader
         title="Evenimente"
-        subtitle="Seminare, workshopuri și conferințe PRIMARISTIC®"
+        subtitle="Congrese, seminare și conferințe PRIMARISTICA®"
       />
 
       <div className="mx-auto max-w-4xl px-4 py-12 md:py-16">
@@ -86,6 +86,12 @@ export default function EvenimentePage() {
               ))}
             </div>
           </section>
+        )}
+
+        {viitoare.length === 0 && trecute.length === 0 && (
+          <p className="text-center text-lg text-muted-foreground">
+            Nu sunt evenimente programate momentan. Reveniți pentru actualizări.
+          </p>
         )}
       </div>
 

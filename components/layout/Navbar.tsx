@@ -27,7 +27,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <LogoIcon />
           <span className="text-xl font-bold tracking-wide text-primary">
-            PRIMARISTIC<sup className="text-xs">®</sup>
+            PRIMARISTICA<sup className="text-xs">®</sup>
           </span>
         </Link>
 

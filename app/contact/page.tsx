@@ -26,7 +26,7 @@ export default function ContactPage() {
             Contact
           </h1>
           <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
-            Suntem aici pentru a răspunde întrebărilor tale despre PRIMARISTIC®
+            Suntem aici pentru a răspunde întrebărilor tale despre PRIMARISTICA®
           </p>
         </div>
       </div>

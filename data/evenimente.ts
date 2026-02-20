@@ -10,29 +10,20 @@ export interface Eveniment {
 export const evenimente: Eveniment[] = [
   {
     id: "1",
-    titlu: "Seminar introductiv PRIMARISTIC®",
-    data: "15 Martie 2025",
-    locatie: "București, Asociația ArsMedica",
+    titlu: "Primul Congres Internațional de Primaristică",
+    data: "2019",
+    locatie: "Viena, Austria",
     descriere:
-      "Seminar deschis pentru părinți, medici și terapeuți — introducere în principiile dezvoltării senzo-motorii și rolul Reflexelor Primare.",
-    trecut: false,
+      "\u201EFive decades of Primaristic\u201D \u2014 primul congres interna\u021Bional dedicat disciplinei PRIMARISTICA\u00AE.",
+    trecut: true,
   },
   {
     id: "2",
-    titlu: "Workshop: PRIMARISTIC® pentru gravide",
-    data: "20 Aprilie 2025",
-    locatie: "Cluj-Napoca",
+    titlu: "Al doilea Congres Internațional de Primaristică",
+    data: "2022",
+    locatie: "Barcelona, Spania",
     descriere:
-      "Workshop practic destinat femeilor gravide — exerciții de pregătire senzo-motorie pentru sarcină și naștere.",
-    trecut: false,
-  },
-  {
-    id: "3",
-    titlu: "Conferința Anuală de Primaristică",
-    data: "10 Noiembrie 2024",
-    locatie: "București",
-    descriere:
-      "Conferință cu prezentări ale profesorilor de PRIMARISTIC® din România și invitați internaționali. Studii de caz și demonstrații practice.",
+      "\u201EZece ani de Primaristic\u0103 \u00een Rom\u00e2nia\u201D \u2014 g\u0103zduit de Academia Medico Homeopatica de Barcelona, fondat\u0103 \u00een 1890.",
     trecut: true,
   },
 ];
