@@ -1,8 +1,24 @@
 import Link from "next/link";
+import { type ComponentType } from "react";
 import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/home/HeroSection";
 import { SectionDivider } from "@/components/shared/SectionDivider";
 import { ContactCTA } from "@/components/shared/ContactCTA";
+import {
+  IconPregnant,
+  IconNewborn,
+  IconToddler,
+  IconStudent,
+  IconYouth,
+  IconAdult,
+  IconSenior,
+  IconFamily,
+  IconNeural,
+  IconWave,
+  IconLesson,
+  IconPractice,
+  IconGrowth,
+} from "@/components/shared/Icons";
 
 const testimonials = [
   "încordarea din corpul meu a dispărut treptat",
@@ -23,44 +39,48 @@ const testimonials = [
   "sunt mai sănătos decât eram acum 10 ani",
 ];
 
-const audienceGroups = [
+const audienceGroups: {
+  Icon: ComponentType<{ className?: string }>;
+  title: string;
+  text: string;
+}[] = [
   {
-    emoji: "🤰",
+    Icon: IconPregnant,
     title: "Femeia gravidă",
     text: "Pregătește corpul și mintea pentru sarcină. Uterul și pelvisul devin un cuib potrivit pentru copil. Practicarea zilnică ușurează nașterea și evită complicațiile.",
   },
   {
-    emoji: "👶",
+    Icon: IconNewborn,
     title: "Nou-născut și sugar",
     text: "Din prima zi de viață. Mama este învățată să ofere copilului poziții libere de reflexele primare. Cu cât se începe mai devreme, cu atât dezvoltarea senzo-motorie este mai armonioasă.",
   },
   {
-    emoji: "🧒",
+    Icon: IconToddler,
     title: "Copilul mic (1–3 ani)",
     text: "Maturarea posturală continuă — ridicarea de la orizontală la verticală. Primaristica asigură parcurgerea corectă a etapelor: controlul capului, rotația corpului, mersul în patru labe.",
   },
   {
-    emoji: "📚",
+    Icon: IconStudent,
     title: "Preșcolar și școlar",
     text: "Procesul de învățare depinde de funcționarea senzo-motorie corectă. Primaristica ajută la concentrare, echilibru emoțional și performanță școlară.",
   },
   {
-    emoji: "🎓",
+    Icon: IconYouth,
     title: "Tineri",
     text: "Pe perioada pubertății și adolescenței, cât timp sunt sub influența patternurilor tonice, gândurile și acțiunile nu pot fi libere. Primaristica eliberează individualitatea.",
   },
   {
-    emoji: "💼",
+    Icon: IconAdult,
     title: "Adulți",
     text: "Au nevoie să fie liberi de patternuri fixe în comportament și atitudine. Întreruperea acestor patternuri permite o viață liberă, eficientă și echilibrată.",
   },
   {
-    emoji: "🧓",
+    Icon: IconSenior,
     title: "Seniori",
     text: "Toate bolile pot fi agravate de reflexele primare. Prin reducerea hipertoniei musculare, mobilitatea și funcțiile cardiovasculare se îmbunătățesc.",
   },
   {
-    emoji: "👨‍👩‍👧‍👦",
+    Icon: IconFamily,
     title: "Familia",
     text: "Cu cât membrii unei familii sunt mai liberi de reflexele primare, cu atât mai ușor își vor rezolva conflictele. Primaristica aduce o bază comună de armonie.",
   },
@@ -124,8 +144,8 @@ export default function HomePage() {
 
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                <span className="text-3xl">🧬</span>
+              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-inset ring-primary/10">
+                <IconNeural className="h-7 w-7 text-primary" />
               </div>
               <h3 className="mb-3 text-xl font-bold text-foreground">
                 Reflexele Primare
@@ -149,8 +169,8 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                <span className="text-3xl">💪</span>
+              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-inset ring-primary/10">
+                <IconWave className="h-7 w-7 text-primary" />
               </div>
               <h3 className="mb-3 text-xl font-bold text-foreground">
                 Tonusul Muscular
@@ -210,10 +230,12 @@ export default function HomePage() {
             {audienceGroups.map((group) => (
               <div
                 key={group.title}
-                className="group rounded-2xl border border-border bg-background p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
+                className="group relative rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5"
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                  <span className="text-3xl">{group.emoji}</span>
+                {/* Subtle top accent line */}
+                <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-inset ring-primary/10 transition-all duration-300 group-hover:from-primary/20 group-hover:to-primary/10 group-hover:ring-primary/20">
+                  <group.Icon className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-dark" />
                 </div>
                 <h3 className="mb-2 text-base font-bold text-foreground">
                   {group.title}
@@ -242,9 +264,9 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                <span className="text-3xl">🎓</span>
+            <div className="group rounded-2xl border border-border bg-card p-8 text-center transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
+              <div className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-inset ring-primary/10">
+                <IconLesson className="h-7 w-7 text-primary" />
               </div>
               <h3 className="mb-2 font-bold text-foreground">Lecția individuală</h3>
               <p className="text-sm font-light text-muted-foreground">
@@ -253,9 +275,9 @@ export default function HomePage() {
                 inițiere.
               </p>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                <span className="text-3xl">🏠</span>
+            <div className="group rounded-2xl border border-border bg-card p-8 text-center transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
+              <div className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-inset ring-primary/10">
+                <IconPractice className="h-7 w-7 text-primary" />
               </div>
               <h3 className="mb-2 font-bold text-foreground">Practică zilnică acasă</h3>
               <p className="text-sm font-light text-muted-foreground">
@@ -264,9 +286,9 @@ export default function HomePage() {
                 configurație care evită reflexele primare.
               </p>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                <span className="text-3xl">🌱</span>
+            <div className="group rounded-2xl border border-border bg-card p-8 text-center transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
+              <div className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-inset ring-primary/10">
+                <IconGrowth className="h-7 w-7 text-primary" />
               </div>
               <h3 className="mb-2 font-bold text-foreground">Evoluție continuă</h3>
               <p className="text-sm font-light text-muted-foreground">
@@ -309,12 +331,21 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Decorative opening quote */}
+          <div className="mb-8 flex justify-center">
+            <svg className="h-10 w-10 text-primary/15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11 7.5a4.5 4.5 0 00-4.5 4.5c0 1.38.63 2.63 1.6 3.48A6.73 6.73 0 013 21h1.5c0-2.66 1.83-4.9 4.28-5.54A4.49 4.49 0 0011 7.5zm-4 4.5a3 3 0 116 0 3 3 0 01-6 0zM22 7.5a4.5 4.5 0 00-4.5 4.5c0 1.38.63 2.63 1.6 3.48A6.73 6.73 0 0114 21h1.5c0-2.66 1.83-4.9 4.28-5.54A4.49 4.49 0 0022 7.5zm-4 4.5a3 3 0 116 0 3 3 0 01-6 0z" />
+            </svg>
+          </div>
+
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((t) => (
               <div
                 key={t}
-                className="rounded-xl border border-border bg-background p-5"
+                className="group relative rounded-xl border border-border bg-background p-5 transition-all duration-300 hover:border-primary/20"
               >
+                {/* Subtle left accent */}
+                <div className="absolute inset-y-3 left-0 w-px bg-gradient-to-b from-transparent via-primary/25 to-transparent transition-all duration-300 group-hover:via-primary/50" />
                 <p className="text-sm font-light italic text-muted-foreground">
                   {"\u201E"}...{t}{"\u201D"}
                 </p>
@@ -342,7 +373,10 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="space-y-6">
+          <div className="relative space-y-6">
+            {/* Timeline connecting line */}
+            <div className="absolute bottom-8 left-[52px] top-8 hidden w-px bg-gradient-to-b from-primary/20 via-primary/10 to-primary/20 md:block" />
+
             {[
               {
                 year: "Anii '70",
@@ -379,10 +413,10 @@ export default function HomePage() {
             ].map((item) => (
               <div
                 key={item.year}
-                className="flex gap-6 rounded-xl border border-border bg-card p-6"
+                className="group flex gap-6 rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/20 hover:shadow-md hover:shadow-primary/5"
               >
-                <div className="shrink-0">
-                  <span className="inline-block rounded-lg bg-primary/10 px-3 py-1.5 text-sm font-bold text-primary">
+                <div className="relative shrink-0">
+                  <span className="relative z-10 inline-block rounded-lg bg-gradient-to-br from-primary/15 to-primary/10 px-3 py-1.5 text-sm font-bold text-primary ring-1 ring-inset ring-primary/10">
                     {item.year}
                   </span>
                 </div>
