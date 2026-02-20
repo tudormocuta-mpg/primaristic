@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -9,24 +10,6 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { localePath } from "@/lib/i18n-utils";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-
-function LogoIcon() {
-  return (
-    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary">
-      <svg
-        className="h-5 w-5"
-        fill="none"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
-  );
-}
 
 interface NavbarProps {
   locale: Locale;
@@ -51,7 +34,13 @@ export function Navbar({ locale, dict }: NavbarProps) {
           href={localePath(locale, "/")}
           className="flex items-center gap-3"
         >
-          <LogoIcon />
+          <Image
+            src="/images/logo-icon.jpg"
+            alt="PRIMARISTICA®"
+            width={36}
+            height={36}
+            className="h-9 w-9"
+          />
           <span className="font-display text-xl tracking-wider text-foreground">
             PRIMARISTICA<sup className="text-xs">®</sup>
           </span>

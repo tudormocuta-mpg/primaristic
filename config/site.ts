@@ -7,6 +7,6 @@ export const siteConfig = {
     phone: "0212124655",
     phoneDisplay: "021 212 46 55",
     website: "primaristic.ro",
-    facebook: "facebook.com/primaristicromania",
+    facebook: "https://www.facebook.com/PrimaristicaRomania",
   },
 } as const;

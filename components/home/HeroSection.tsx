@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { localePath } from "@/lib/i18n-utils";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -11,68 +10,38 @@ interface HeroSectionProps {
 
 export function HeroSection({ dict, locale }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(30,33%,95%)] via-[hsl(30,25%,93%)] to-[hsl(160,15%,91%)] py-20 md:py-28 lg:py-36">
+    <header className="relative overflow-hidden bg-background py-24 lg:py-32">
+      {/* Decorative blurred shapes */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-[5%] -top-[10%] h-[40rem] w-[40rem] rounded-full bg-primary/5 blur-[100px]" />
-        <div className="absolute -bottom-[10%] -right-[5%] h-[35rem] w-[35rem] rounded-full bg-accent/5 blur-[80px]" />
-        <div className="line-art-circle absolute right-[10%] top-[15%] h-[350px] w-[350px] opacity-20" />
-        <div className="line-art-circle absolute right-[18%] top-[22%] h-[200px] w-[200px] opacity-10" />
-        <div className="absolute inset-0 bg-grain opacity-40" />
+        <div className="absolute -left-48 -top-48 h-96 w-96 rounded-full bg-primary opacity-10 blur-3xl" />
+        <div className="absolute -bottom-32 -right-32 h-[30rem] w-[30rem] rounded-full bg-accent opacity-10 blur-3xl" />
+        <div className="absolute inset-0 bg-grain opacity-30" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-4 text-center">
-        <div className="mb-6 inline-flex items-center gap-3">
-          <span className="h-px w-8 bg-accent" />
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            {dict.tagline}
-          </span>
-          <span className="h-px w-8 bg-accent" />
-        </div>
-
-        <h1 className="font-display text-4xl tracking-tight text-foreground md:text-5xl lg:text-7xl lg:leading-[1.1]">
-          <span className="italic text-primary">PRIMARISTICA</span>
-          <sup className="text-lg md:text-xl">®</sup>
+      <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
+        <h1 className="font-display text-5xl italic leading-tight text-foreground md:text-7xl">
+          {dict.tagline}.
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg font-light text-muted-foreground md:text-xl">
+        <p className="mx-auto mt-8 max-w-2xl text-lg font-light leading-relaxed text-muted-foreground md:text-xl">
           {dict.subtitle}
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="h-14 rounded-full px-10 shadow-xl shadow-primary/10"
+        <div className="mt-12 flex flex-col justify-center gap-6 sm:flex-row">
+          <Link
+            href="#ce-este"
+            className="inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-widest text-white shadow-lg shadow-primary/20 transition hover:bg-primary/90"
           >
-            <Link href="#ce-este">
-              {dict.ctaPrimary}
-              <svg
-                className="ml-2 h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                />
-              </svg>
-            </Link>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="h-14 rounded-full px-10"
+            {dict.ctaPrimary}
+          </Link>
+          <Link
+            href={localePath(locale, "/profesori")}
+            className="inline-flex items-center justify-center border border-foreground px-8 py-4 text-sm font-semibold uppercase tracking-widest text-foreground transition hover:bg-foreground hover:text-white"
           >
-            <Link href={localePath(locale, "/profesori")}>
-              {dict.ctaSecondary}
-            </Link>
-          </Button>
+            {dict.ctaSecondary}
+          </Link>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

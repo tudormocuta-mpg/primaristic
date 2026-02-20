@@ -1,26 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { localePath } from "@/lib/i18n-utils";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-
-function LogoIcon() {
-  return (
-    <div className="flex h-8 w-8 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary">
-      <svg
-        className="h-4 w-4"
-        fill="none"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
-  );
-}
 
 interface FooterProps {
   locale: Locale;
@@ -42,7 +25,13 @@ export function Footer({ locale, dict }: FooterProps) {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
-              <LogoIcon />
+              <Image
+                src="/images/logo-icon.jpg"
+                alt="PRIMARISTICA®"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <p className="font-display text-lg text-foreground">
                 PRIMARISTICA<sup className="text-xs">®</sup>
               </p>
@@ -89,6 +78,19 @@ export function Footer({ locale, dict }: FooterProps) {
               </li>
               <li>
                 {dict.common.schedule}: {dict.common.scheduleValue}
+              </li>
+              <li>
+                <a
+                  href={siteConfig.contact.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 transition-colors hover:text-primary"
+                >
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                  Facebook
+                </a>
               </li>
             </ul>
           </div>
