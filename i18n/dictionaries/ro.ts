@@ -159,6 +159,10 @@ const ro = {
         title: "În cazul copiilor",
         text: "Mama (sau persoana care îl îngrijește) va fi învățată și călăuzită să aplice copilului pozițiile primaristice. Mama va practica zilnic cu copilul ei, acasă, astfel încât ea însăși își va educa propriul copil. Primaristica trebuie continuată până la desăvârșirea maturării posturale.",
       },
+      result: {
+        title: "Viața liberă",
+        text: "Fără încordare, fără pattern-uri fixe. Un somn odihnitor, o minte limpede, relații armonioase \u2014 aceasta este viața cu Primaristica.",
+      },
     },
     testimonials: {
       sectionLabel: "Beneficii",

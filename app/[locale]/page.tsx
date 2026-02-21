@@ -240,17 +240,15 @@ export default async function HomePage({
               </div>
             ))}
 
-            {/* Photo slot in 4th column */}
-            <div className="relative hidden min-h-[250px] overflow-hidden rounded-2xl lg:block">
-              <div className="photo-placeholder flex h-full w-full items-center justify-center">
-                <Image
-                  src="/images/logo-icon.jpg"
-                  alt=""
-                  width={80}
-                  height={80}
-                  className="opacity-10"
-                />
-              </div>
+            {/* Result card — the destination */}
+            <div className="flex flex-col justify-center rounded-2xl bg-gradient-to-br from-primary to-accent p-8 text-white">
+              <div className="mb-4 font-display text-4xl opacity-30">✦</div>
+              <h3 className="mb-4 font-display text-xl font-bold">
+                {t.method.result.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-white/85">
+                {t.method.result.text}
+              </p>
             </div>
           </div>
 

@@ -161,6 +161,10 @@ const de: Dictionary = {
         title: "Im Falle von Kindern",
         text: "Die Mutter (oder die betreuende Person) wird angeleitet, dem Kind die primaristischen Positionen zu geben. Die Mutter übt täglich mit ihrem Kind zu Hause, sodass sie selbst ihr eigenes Kind erzieht. Primaristik muss bis zur Vollendung der posturalen Reifung fortgesetzt werden.",
       },
+      result: {
+        title: "Ein freies Leben",
+        text: "Keine Anspannung, keine festen Muster. Erholsamer Schlaf, ein klarer Geist, harmonische Beziehungen \u2014 das ist das Leben mit Primaristik.",
+      },
     },
     testimonials: {
       sectionLabel: "Nutzen",

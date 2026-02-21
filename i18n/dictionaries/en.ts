@@ -161,6 +161,10 @@ const en: Dictionary = {
         title: "For children",
         text: "The mother (or caregiver) will be taught and guided to apply the Primaristica positions to the child. The mother will practice daily with her child at home, so that she herself educates her own child. Primaristica must be continued until postural maturation is complete.",
       },
+      result: {
+        title: "A free life",
+        text: "No tension, no fixed patterns. Restful sleep, a clear mind, harmonious relationships \u2014 this is life with Primaristica.",
+      },
     },
     testimonials: {
       sectionLabel: "Benefits",

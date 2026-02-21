@@ -161,6 +161,10 @@ const es: Dictionary = {
         title: "En el caso de los niños",
         text: "La madre (o la persona que lo cuida) será enseñada y guiada para aplicar al niño las posiciones primarísticas. La madre practicará diariamente con su hijo, en casa, de modo que ella misma educará a su propio hijo. Primaristica debe continuarse hasta la completa maduración postural.",
       },
+      result: {
+        title: "Una vida libre",
+        text: "Sin tensi\u00F3n, sin patrones fijos. Un sue\u00F1o reparador, una mente clara, relaciones armoniosas \u2014 esta es la vida con Primaristica.",
+      },
     },
     testimonials: {
       sectionLabel: "Beneficios",

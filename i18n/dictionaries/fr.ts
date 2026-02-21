@@ -161,6 +161,10 @@ const fr: Dictionary = {
         title: "Dans le cas des enfants",
         text: "La m\u00E8re (ou la personne qui s'occupe de l'enfant) sera instruite et guid\u00E9e pour appliquer \u00E0 l'enfant les positions primaristiques. La m\u00E8re pratiquera quotidiennement avec son enfant, \u00E0 domicile, de sorte qu'elle \u00E9duquera elle-m\u00EAme son propre enfant. La Primaristique doit \u00EAtre poursuivie jusqu'\u00E0 l'ach\u00E8vement de la maturation posturale.",
       },
+      result: {
+        title: "Une vie libre",
+        text: "Sans tension, sans sch\u00E9mas fixes. Un sommeil r\u00E9parateur, un esprit clair, des relations harmonieuses \u2014 c\u2019est la vie avec la Primaristique.",
+      },
     },
     testimonials: {
       sectionLabel: "B\u00E9n\u00E9fices",
