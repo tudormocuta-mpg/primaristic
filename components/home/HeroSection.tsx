@@ -49,7 +49,7 @@ export function HeroSection({ dict, locale }: HeroSectionProps) {
         {/* Right column: hero photo */}
         <div className="relative hidden min-h-[500px] lg:block">
           <Image
-            src="/images/hero.jpg"
+            src="/images/hero-2.jpg"
             alt="PRIMARISTICA®"
             fill
             className="rounded-2xl object-cover shadow-md grayscale transition-all duration-700 ease-in-out hover:shadow-xl hover:grayscale-0"

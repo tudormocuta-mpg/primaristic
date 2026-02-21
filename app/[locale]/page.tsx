@@ -61,16 +61,13 @@ export default async function HomePage({
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             {/* Left: photo */}
-            <div className="relative">
-              <div className="photo-placeholder flex h-[500px] w-full items-center justify-center overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/logo-icon.jpg"
-                  alt=""
-                  width={120}
-                  height={120}
-                  className="opacity-10"
-                />
-              </div>
+            <div className="relative h-[500px] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/home-ce-este.jpg"
+                alt="PRIMARISTICA®"
+                fill
+                className="object-cover shadow-md grayscale transition-all duration-700 ease-in-out hover:shadow-xl hover:grayscale-0"
+              />
             </div>
 
             {/* Right: text */}
@@ -302,13 +299,12 @@ export default async function HomePage({
             {/* Left: portrait photo (sticky) */}
             <div className="relative order-2 lg:order-1">
               <div className="sticky top-24">
-                <div className="photo-placeholder flex h-[500px] w-full items-center justify-center overflow-hidden rounded-2xl shadow-xl">
+                <div className="relative h-[500px] overflow-hidden rounded-2xl shadow-xl">
                   <Image
-                    src="/images/logo-icon.jpg"
-                    alt=""
-                    width={120}
-                    height={120}
-                    className="opacity-10"
+                    src="/images/home-istoric.jpg"
+                    alt="PRIMARISTICA® — Istoric"
+                    fill
+                    className="object-cover grayscale transition-all duration-700 ease-in-out hover:grayscale-0"
                   />
                 </div>
               </div>
@@ -349,13 +345,12 @@ export default async function HomePage({
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* Left: community photo */}
             <div className="group relative order-2 overflow-hidden rounded-2xl lg:order-1">
-              <div className="photo-placeholder flex h-[400px] w-full items-center justify-center">
+              <div className="relative h-[400px] w-full overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/logo-icon.jpg"
-                  alt=""
-                  width={100}
-                  height={100}
-                  className="opacity-10"
+                  src="/images/home-comunitate.jpg"
+                  alt="PRIMARISTICA® — Comunitate"
+                  fill
+                  className="object-cover grayscale transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:grayscale-0"
                 />
               </div>
             </div>
@@ -388,14 +383,18 @@ export default async function HomePage({
 
           {/* Team photo */}
           <div className="group relative mx-auto mt-12 mb-16 w-full overflow-hidden rounded-2xl">
-            <div className="photo-placeholder flex h-[500px] w-full items-center justify-center">
+            <div className="relative h-[500px] w-full overflow-hidden rounded-2xl">
               <Image
-                src="/images/logo-icon.jpg"
-                alt=""
-                width={120}
-                height={120}
-                className="opacity-10"
+                src="/images/home-diploma.jpg"
+                alt="PRIMARISTICA® — Echipa"
+                fill
+                className="object-cover grayscale transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:grayscale-0"
               />
+              <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent pb-12 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
+                <span className="font-display text-2xl italic tracking-wide text-white">
+                  PRIMARISTICA®
+                </span>
+              </div>
             </div>
           </div>
 
