@@ -16,7 +16,7 @@ export const profesori: Profesor[] = [
     nume: "Dr. Carmen Maria Sturza",
     activ: true,
     locatie: "București",
-    imagine: "/images/profesori/Carmen Maria Sturza.jpg",
+    imagine: "/images/profesori/Carmen Maria Sturza - 2.png",
   },
   {
     id: "1",
@@ -30,7 +30,7 @@ export const profesori: Profesor[] = [
     nume: "Rodica Mariana Țucra",
     activ: true,
     locatie: "București",
-    imagine: "/images/profesori/Rodica Mariana Țucra.jpg",
+    imagine: "/images/profesori/Rodica Mariana Țucra - 2.png",
   },
   {
     id: "3",
@@ -58,7 +58,7 @@ export const profesori: Profesor[] = [
     nume: "Alina Dabija",
     activ: true,
     locatie: "București",
-    imagine: "/images/profesori/Alina Dabija (dreapta).jpg",
+    imagine: "/images/profesori/Alina Dabija - 2.png",
   },
   {
     id: "6",
@@ -115,7 +115,7 @@ export const profesori: Profesor[] = [
     nume: "Sînziana Tatiana Perez-Matauschek",
     activ: false,
     locatie: "Timișoara",
-    imagine: fallbackImage,
+    imagine: "/images/profesori/Sinziana Tatiana Pere Matauschek.png",
   },
   {
     id: "16",
