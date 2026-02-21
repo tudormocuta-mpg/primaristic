@@ -332,7 +332,7 @@ const ro = {
       text: "Informațiile detaliate despre cerințele de admitere și procesul de înscriere la următorul curs de formare vor fi publicate pe această pagină. Pentru întrebări suplimentare, vă rugăm să ne contactați.",
     },
     contactCTA: {
-      title: "Contactează-ne pentru detalii despre formare",
+      title: "Contactează-ne pentru detalii despre cursurile de formare",
       description:
         "Suntem bucuroși să îți oferim toate informațiile necesare despre programul de formare în PRIMARISTICA®.",
     },

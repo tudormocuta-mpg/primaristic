@@ -75,10 +75,11 @@ export default async function FormarePage({
           </div>
 
           <div className="relative">
+            {/* Single continuous vertical line — spans from Year I icon center to bottom of container */}
+            <div className="absolute left-1/2 top-7 bottom-0 hidden w-px -translate-x-1/2 bg-border md:block" />
+
             {/* Year 1 */}
             <div className="relative mb-12 md:mb-16">
-              {/* Line segment: from center of Year 1 icon to bottom of section */}
-              <div className="absolute left-1/2 top-7 bottom-0 hidden w-px -translate-x-1/2 bg-border md:block" />
               <div className="absolute left-1/2 top-0 z-10 hidden -translate-x-1/2 md:block">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary bg-card shadow-md shadow-primary/10">
                   <span className="font-display text-lg text-primary">I</span>
@@ -109,8 +110,6 @@ export default async function FormarePage({
 
             {/* Year 2 */}
             <div className="relative mb-12 md:mb-16">
-              {/* Line segment: full height of Year 2 section */}
-              <div className="absolute left-1/2 top-0 bottom-0 hidden w-px -translate-x-1/2 bg-border md:block" />
               <div className="absolute left-1/2 top-0 z-10 hidden -translate-x-1/2 md:block">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary bg-card shadow-md shadow-primary/10">
                   <span className="font-display text-lg text-primary">II</span>
@@ -141,8 +140,8 @@ export default async function FormarePage({
 
             {/* Diploma */}
             <div className="relative">
-              {/* Line segment: from top to center of diploma icon only */}
-              <div className="absolute left-1/2 top-0 h-7 hidden w-px -translate-x-1/2 bg-border md:block" />
+              {/* Mask: hides the vertical line below the diploma icon */}
+              <div className="absolute left-1/2 top-14 bottom-0 z-[5] hidden w-3 -translate-x-1/2 bg-background md:block" />
               <div className="absolute left-1/2 top-0 z-10 hidden -translate-x-1/2 md:block">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent bg-card shadow-md shadow-accent/10">
                   <svg className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -150,7 +149,7 @@ export default async function FormarePage({
                   </svg>
                 </div>
               </div>
-              <div className="md:mx-auto md:max-w-md md:pt-20">
+              <div className="relative z-[6] md:mx-auto md:max-w-md md:pt-20">
                 <div className="mb-4 flex items-center gap-3 md:hidden">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-accent bg-card shadow-md shadow-accent/10">
                     <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

@@ -334,7 +334,7 @@ const fr: Dictionary = {
       text: "Les informations d\u00E9taill\u00E9es sur les conditions d'admission et le processus d'inscription au prochain cours de formation seront publi\u00E9es sur cette page. Pour toute question suppl\u00E9mentaire, veuillez nous contacter.",
     },
     contactCTA: {
-      title: "Contactez-nous pour des d\u00E9tails sur la formation",
+      title: "Contactez-nous pour des d\u00E9tails sur les cours de formation",
       description:
         "Nous serons heureux de vous fournir toutes les informations n\u00E9cessaires sur le programme de formation en PRIMARISTICA\u00AE.",
     },

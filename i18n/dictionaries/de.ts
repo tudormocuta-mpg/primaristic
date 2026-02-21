@@ -334,7 +334,7 @@ const de: Dictionary = {
       text: "Detaillierte Informationen über die Zulassungsvoraussetzungen und den Einschreibungsprozess für den nächsten Ausbildungskurs werden auf dieser Seite veröffentlicht. Für weitere Fragen kontaktieren Sie uns bitte.",
     },
     contactCTA: {
-      title: "Kontaktieren Sie uns für Details zur Ausbildung",
+      title: "Kontaktieren Sie uns für Details zu den Ausbildungskursen",
       description:
         "Wir freuen uns, Ihnen alle notwendigen Informationen über das Ausbildungsprogramm in PRIMARISTICA® zu geben.",
     },

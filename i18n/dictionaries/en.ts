@@ -334,7 +334,7 @@ const en: Dictionary = {
       text: "Detailed information about admission requirements and the enrollment process for the next training course will be published on this page. For additional questions, please contact us.",
     },
     contactCTA: {
-      title: "Contact us for training details",
+      title: "Contact us for details about training courses",
       description:
         "We are happy to provide you with all the necessary information about the PRIMARISTICA® training program.",
     },

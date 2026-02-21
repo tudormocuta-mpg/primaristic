@@ -334,7 +334,7 @@ const es: Dictionary = {
       text: "La información detallada sobre los requisitos de admisión y el proceso de inscripción para el próximo curso de formación se publicará en esta página. Para preguntas adicionales, le rogamos que se ponga en contacto con nosotros.",
     },
     contactCTA: {
-      title: "Contáctenos para obtener información sobre la formación",
+      title: "Contáctenos para obtener información sobre los cursos de formación",
       description:
         "Estaremos encantados de proporcionarle toda la información necesaria sobre el programa de formación en PRIMARISTICA®.",
     },
