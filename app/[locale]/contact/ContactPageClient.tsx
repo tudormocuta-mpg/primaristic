@@ -2,7 +2,7 @@
 
 import type { FormEvent } from "react";
 import { useState } from "react";
-import { Phone, Clock, CheckCircle } from "lucide-react";
+import { Phone, Clock, CheckCircle, AlertCircle, Loader2, MapPin } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -16,10 +16,39 @@ export default function ContactPageClient({
   commonDict,
 }: ContactPageClientProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      nume: formData.get("nume") as string,
+      email: formData.get("email") as string,
+      telefon: formData.get("telefon") as string,
+      mesaj: formData.get("mesaj") as string,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError(dict.form.errorText);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -44,6 +73,12 @@ export default function ContactPageClient({
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <div className="flex items-center gap-3 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700 dark:border-red-800 dark:bg-red-950/50 dark:text-red-400">
+                    <AlertCircle className="h-5 w-5 shrink-0" />
+                    <p>{error}</p>
+                  </div>
+                )}
                 <div>
                   <label
                     htmlFor="nume"
@@ -56,8 +91,9 @@ export default function ContactPageClient({
                     name="nume"
                     type="text"
                     required
+                    disabled={loading}
                     placeholder={dict.form.namePlaceholder}
-                    className="w-full rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-60"
                   />
                 </div>
                 <div>
@@ -72,8 +108,9 @@ export default function ContactPageClient({
                     name="email"
                     type="email"
                     required
+                    disabled={loading}
                     placeholder={dict.form.emailPlaceholder}
-                    className="w-full rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-60"
                   />
                 </div>
                 <div>
@@ -87,8 +124,9 @@ export default function ContactPageClient({
                     id="telefon"
                     name="telefon"
                     type="tel"
+                    disabled={loading}
                     placeholder={dict.form.phonePlaceholder}
-                    className="w-full rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-60"
                   />
                 </div>
                 <div>
@@ -103,16 +141,19 @@ export default function ContactPageClient({
                     name="mesaj"
                     required
                     rows={5}
+                    disabled={loading}
                     placeholder={dict.form.messagePlaceholder}
-                    className="w-full resize-y rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full resize-y rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-primary focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-60"
                   />
                 </div>
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="rounded-lg bg-primary px-8 py-3 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md active:translate-y-0"
+                    disabled={loading}
+                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md active:translate-y-0 disabled:pointer-events-none disabled:opacity-60"
                   >
-                    {dict.form.submit}
+                    {loading && <Loader2 className="h-4 w-4 animate-spin" />}
+                    {loading ? dict.form.sending : dict.form.submit}
                   </button>
                 </div>
               </form>
@@ -133,6 +174,15 @@ export default function ContactPageClient({
                 </h3>
 
                 <div className="mt-6 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <MapPin className="h-4 w-4 text-primary" />
+                    </div>
+                    <span className="text-muted-foreground">
+                      {siteConfig.contact.address}
+                    </span>
+                  </div>
+
                   <div className="flex items-center gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
                       <Phone className="h-4 w-4 text-primary" />

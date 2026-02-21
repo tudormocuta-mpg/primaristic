@@ -52,7 +52,7 @@ const ro = {
     schedule: "Program",
     phone: "Tel",
     copyright:
-      "Site oficial patronat de Institutul de Primaristică România, editat cu sprijinul Asociației ArsMedica-România.",
+      "Site oficial patronat de Institutul de Primaristică România.",
     scheduleValue: "Luni–Vineri, 09:00–12:00",
   },
 
@@ -380,6 +380,8 @@ const ro = {
       required: "*",
       successTitle: "Mulțumim pentru mesajul tău!",
       successText: "Te vom contacta în cel mai scurt timp.",
+      errorText: "A apărut o eroare. Te rugăm să încerci din nou.",
+      sending: "Se trimite...",
     },
     info: {
       title: "Informații de contact",

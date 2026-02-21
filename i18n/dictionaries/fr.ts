@@ -54,7 +54,7 @@ const fr: Dictionary = {
     schedule: "Horaires",
     phone: "T\u00E9l",
     copyright:
-      "Site officiel patronn\u00E9 par l'Institut de Primaristique Roumanie, \u00E9dit\u00E9 avec le soutien de l'Association ArsMedica-Romania.",
+      "Site officiel patronn\u00E9 par l'Institut de Primaristique Roumanie.",
     scheduleValue: "Lundi\u2013Vendredi, 09h00\u201312h00",
   },
 
@@ -382,6 +382,8 @@ const fr: Dictionary = {
       required: "*",
       successTitle: "Merci pour votre message\u00A0!",
       successText: "Nous vous contacterons dans les plus brefs d\u00E9lais.",
+      errorText: "Une erreur est survenue. Veuillez r\u00E9essayer.",
+      sending: "Envoi en cours...",
     },
     info: {
       title: "Coordonn\u00E9es",

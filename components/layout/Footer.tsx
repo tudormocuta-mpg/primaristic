@@ -67,6 +67,7 @@ export function Footer({ locale, dict }: FooterProps) {
             </p>
             <ul className="space-y-3 text-sm font-light text-muted-foreground">
               <li>{siteConfig.contact.organization}</li>
+              <li>{siteConfig.contact.address}</li>
               <li>
                 {dict.common.phone}:{" "}
                 <a
@@ -97,8 +98,7 @@ export function Footer({ locale, dict }: FooterProps) {
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center text-xs font-light text-muted-foreground">
-          <p>{dict.common.copyright}</p>
-          <p className="mt-1">
+          <p>
             &copy; {new Date().getFullYear()} {dict.metadata.siteName}.{" "}
             {dict.common.allRightsReserved}
           </p>

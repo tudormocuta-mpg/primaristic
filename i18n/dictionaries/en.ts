@@ -54,7 +54,7 @@ const en: Dictionary = {
     schedule: "Hours",
     phone: "Phone",
     copyright:
-      "Official website managed by Institutul de Primaristică România, published with the support of Asociația ArsMedica-România.",
+      "Official website managed by Institutul de Primaristică România.",
     scheduleValue: "Monday–Friday, 09:00–12:00",
   },
 
@@ -382,6 +382,8 @@ const en: Dictionary = {
       required: "*",
       successTitle: "Thank you for your message!",
       successText: "We will get back to you as soon as possible.",
+      errorText: "An error occurred. Please try again.",
+      sending: "Sending...",
     },
     info: {
       title: "Contact information",

@@ -54,7 +54,7 @@ const de: Dictionary = {
     schedule: "Öffnungszeiten",
     phone: "Tel",
     copyright:
-      "Offizielle Website unter der Schirmherrschaft des Instituts für Primaristik Rumänien, herausgegeben mit Unterstützung der Vereinigung ArsMedica-România.",
+      "Offizielle Website unter der Schirmherrschaft des Instituts für Primaristik Rumänien.",
     scheduleValue: "Montag–Freitag, 09:00–12:00",
   },
 
@@ -382,6 +382,8 @@ const de: Dictionary = {
       required: "*",
       successTitle: "Vielen Dank für Ihre Nachricht!",
       successText: "Wir werden Sie so schnell wie möglich kontaktieren.",
+      errorText: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      sending: "Wird gesendet...",
     },
     info: {
       title: "Kontaktinformationen",

@@ -75,10 +75,10 @@ export default async function FormarePage({
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-52 hidden w-px -translate-x-1/2 bg-border md:block" />
-
             {/* Year 1 */}
             <div className="relative mb-12 md:mb-16">
+              {/* Line segment: from center of Year 1 icon to bottom of section */}
+              <div className="absolute left-1/2 top-7 bottom-0 hidden w-px -translate-x-1/2 bg-border md:block" />
               <div className="absolute left-1/2 top-0 z-10 hidden -translate-x-1/2 md:block">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary bg-card shadow-md shadow-primary/10">
                   <span className="font-display text-lg text-primary">I</span>
@@ -109,6 +109,8 @@ export default async function FormarePage({
 
             {/* Year 2 */}
             <div className="relative mb-12 md:mb-16">
+              {/* Line segment: full height of Year 2 section */}
+              <div className="absolute left-1/2 top-0 bottom-0 hidden w-px -translate-x-1/2 bg-border md:block" />
               <div className="absolute left-1/2 top-0 z-10 hidden -translate-x-1/2 md:block">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary bg-card shadow-md shadow-primary/10">
                   <span className="font-display text-lg text-primary">II</span>
@@ -139,8 +141,10 @@ export default async function FormarePage({
 
             {/* Diploma */}
             <div className="relative">
+              {/* Line segment: from top to center of diploma icon only */}
+              <div className="absolute left-1/2 top-0 h-7 hidden w-px -translate-x-1/2 bg-border md:block" />
               <div className="absolute left-1/2 top-0 z-10 hidden -translate-x-1/2 md:block">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent bg-accent/10 shadow-md shadow-accent/10">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent bg-card shadow-md shadow-accent/10">
                   <svg className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                   </svg>
@@ -148,7 +152,7 @@ export default async function FormarePage({
               </div>
               <div className="md:mx-auto md:max-w-md md:pt-20">
                 <div className="mb-4 flex items-center gap-3 md:hidden">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-accent bg-accent/10 shadow-md shadow-accent/10">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-accent bg-card shadow-md shadow-accent/10">
                     <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                     </svg>
