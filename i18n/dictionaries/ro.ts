@@ -33,6 +33,7 @@ const ro = {
 
   // ── Navigation ──
   nav: {
+    despre: "Despre Primaristică",
     profesori: "Profesori",
     formare: "Formare",
     evenimente: "Evenimente",

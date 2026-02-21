@@ -35,6 +35,7 @@ const fr: Dictionary = {
 
   // ── Navigation ──
   nav: {
+    despre: "À propos",
     profesori: "Professeurs",
     formare: "Formation",
     evenimente: "\u00C9v\u00E9nements",

@@ -35,6 +35,7 @@ const de: Dictionary = {
 
   // ── Navigation ──
   nav: {
+    despre: "Über Primaristik",
     profesori: "Lehrer",
     formare: "Ausbildung",
     evenimente: "Veranstaltungen",

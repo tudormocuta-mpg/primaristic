@@ -12,6 +12,7 @@ interface FooterProps {
 
 export function Footer({ locale, dict }: FooterProps) {
   const navItems = [
+    { label: dict.nav.despre, href: localePath(locale, "/") },
     { label: dict.nav.profesori, href: localePath(locale, "/profesori") },
     { label: dict.nav.formare, href: localePath(locale, "/formare") },
     { label: dict.nav.evenimente, href: localePath(locale, "/evenimente") },
