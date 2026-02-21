@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ContactCTA } from "@/components/shared/ContactCTA";
 import { type Locale } from "@/i18n/config";
@@ -29,21 +30,36 @@ export default async function FormarePage({
     <>
       <PageHeader title={t.header.title} subtitle={t.header.subtitle} />
 
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-20">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-20 lg:px-8">
         {/* Program overview */}
         <section className="mb-20">
-          <div className="mb-8">
-            <span className="mb-2 block text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              {t.program.label}
-            </span>
-            <h2 className="font-display text-3xl text-foreground">
-              {t.program.title}
-            </h2>
-          </div>
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
-            {t.program.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* Left: text */}
+            <div>
+              <div className="mb-8">
+                <span className="mb-2 block text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                  {t.program.label}
+                </span>
+                <h2 className="font-display text-3xl text-foreground">
+                  {t.program.title}
+                </h2>
+              </div>
+              <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+                {t.program.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: photo */}
+            <div className="relative h-[400px] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/formare.jpg"
+                alt="PRIMARISTICA® — Formare"
+                fill
+                className="object-cover shadow-md grayscale transition-all duration-700 ease-in-out hover:shadow-xl hover:grayscale-0"
+              />
+            </div>
           </div>
         </section>
 

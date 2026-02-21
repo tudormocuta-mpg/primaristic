@@ -114,7 +114,7 @@ export const profesori: Profesor[] = [
     id: "15",
     nume: "Sînziana Tatiana Perez-Matauschek",
     activ: false,
-    locatie: "Timișoara",
+    locatie: "București",
     imagine: "/images/profesori/Sinziana Tatiana Pere Matauschek.png",
   },
   {
