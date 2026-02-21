@@ -75,7 +75,7 @@ export default async function FormarePage({
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-border md:block" />
+            <div className="absolute left-1/2 top-0 bottom-52 hidden w-px -translate-x-1/2 bg-border md:block" />
 
             {/* Year 1 */}
             <div className="relative mb-12 md:mb-16">
