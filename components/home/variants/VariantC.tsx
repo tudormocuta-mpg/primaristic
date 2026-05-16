@@ -769,7 +769,6 @@ export function VariantC() {
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif", color: C.ink, background: C.paper, overflow: "hidden" }}>
       <style>{cFonts + cAnims}</style>
-      <NavC />
       <HeroC />
       <WhatIsC />
       <AudienceC />
@@ -779,7 +778,6 @@ export function VariantC() {
       <CommunityC />
       <TeachersC />
       <ContactC />
-      <FooterC />
     </div>
   );
 }
