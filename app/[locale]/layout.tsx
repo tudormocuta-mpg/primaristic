@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import { headers } from "next/headers";
 import { notFound } from "next/navigation";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import "../globals.css";
@@ -42,7 +39,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout({
+// Holds <html>/<body> + locale validation. The global chrome (Navbar/Footer)
+// lives in the (site) route group so the /varianta/* preview pages can render
+// without it.
+export default function LocaleLayout({
   children,
   params,
 }: {
@@ -55,28 +55,12 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const dict = await getDictionary(locale);
-
-  // Variant preview pages render their own complete navbar + footer as part
-  // of the design. Detect them here and skip the global chrome so we don't
-  // show two stacked navbars.
-  const pathname = headers().get("x-pathname") ?? "";
-  const isVariantPreview = /^\/(?:[a-z]{2}\/)?varianta\//.test(pathname);
-
   return (
     <html lang={locale}>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
-        {isVariantPreview ? (
-          children
-        ) : (
-          <div className="flex min-h-screen flex-col">
-            <Navbar locale={locale} dict={dict} />
-            <main className="flex-1">{children}</main>
-            <Footer locale={locale} dict={dict} />
-          </div>
-        )}
+        {children}
       </body>
     </html>
   );
