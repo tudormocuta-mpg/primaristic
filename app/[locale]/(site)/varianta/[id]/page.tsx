@@ -4,7 +4,6 @@ import { VariantA } from "@/components/home/variants/VariantA";
 import { VariantB } from "@/components/home/variants/VariantB";
 import { VariantC } from "@/components/home/variants/VariantC";
 import { VariantD } from "@/components/home/variants/VariantD";
-import { FloatingVariantSwitcher } from "@/components/home/variants/FloatingVariantSwitcher";
 import { VARIANT_META, isVariantId, type VariantId } from "@/components/home/variants/registry";
 import { locales, type Locale } from "@/i18n/config";
 
@@ -48,10 +47,5 @@ export default function VariantPage({ params }: { params: PageParams }) {
 
   const VariantComponent = VARIANT_COMPONENTS[params.id];
 
-  return (
-    <>
-      <FloatingVariantSwitcher locale={locale} currentVariant={params.id} />
-      <VariantComponent />
-    </>
-  );
+  return <VariantComponent />;
 }
