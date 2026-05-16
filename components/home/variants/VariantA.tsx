@@ -577,7 +577,6 @@ export function VariantA() {
   return (
     <div style={{ fontFamily: "'Geist', sans-serif", color: A.ink, background: A.paper, overflow: "hidden" }}>
       <style>{aFonts}</style>
-      <NavA />
       <HeroA />
       <WhatIsA />
       <ConceptsA />
@@ -588,7 +587,6 @@ export function VariantA() {
       <CommunityA />
       <TeachersA />
       <ContactA />
-      <FooterA />
     </div>
   );
 }

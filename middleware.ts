@@ -24,15 +24,6 @@ function getPreferredLocale(request: NextRequest): Locale {
   return defaultLocale;
 }
 
-// Forwards the original pathname to server components via the x-pathname
-// request header so layouts can render chrome conditionally (variant preview
-// pages hide the global Navbar/Footer).
-function withPathnameHeader(request: NextRequest, pathname: string) {
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-pathname", pathname);
-  return { request: { headers: requestHeaders } };
-}
-
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -55,7 +46,7 @@ export function middleware(request: NextRequest) {
 
   // Case 2: URL has a non-default locale prefix (/en/, /de/, etc.) — let it through
   if (pathnameLocale) {
-    return NextResponse.next(withPathnameHeader(request, pathname));
+    return;
   }
 
   // Case 3: No locale prefix — determine which locale to serve
@@ -70,8 +61,7 @@ export function middleware(request: NextRequest) {
 
   // Case 4: Default locale (ro), no prefix — rewrite internally to /ro/...
   return NextResponse.rewrite(
-    new URL(`/${defaultLocale}${pathname}`, request.url),
-    withPathnameHeader(request, pathname)
+    new URL(`/${defaultLocale}${pathname}`, request.url)
   );
 }
 

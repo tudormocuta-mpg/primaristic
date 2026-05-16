@@ -1,9 +1,14 @@
 // Registry of all homepage variants. Adding a new variant: append here and
 // create the corresponding component in this folder.
 
-export type VariantId = "a" | "b" | "c" | "d";
+export type VariantId = "editorial" | "clinic" | "modern" | "vibrant";
 
-export const VARIANT_IDS: readonly VariantId[] = ["a", "b", "c", "d"] as const;
+export const VARIANT_IDS: readonly VariantId[] = [
+  "editorial",
+  "clinic",
+  "modern",
+  "vibrant",
+] as const;
 
 export interface VariantMeta {
   id: VariantId;
@@ -12,24 +17,24 @@ export interface VariantMeta {
 }
 
 export const VARIANT_META: Record<VariantId, VariantMeta> = {
-  a: {
-    id: "a",
-    label: "A · Editorial Warmth",
+  editorial: {
+    id: "editorial",
+    label: "Editorial",
     description: "Newsreader serif + cream + terracotta. Revistă editorială.",
   },
-  b: {
-    id: "b",
-    label: "B · Clinical Index",
+  clinic: {
+    id: "clinic",
+    label: "Clinic",
     description: "Funnel Display + off-white + roșu accent. Enciclopedie clinică.",
   },
-  c: {
-    id: "c",
-    label: "C · Quiet Practice",
+  modern: {
+    id: "modern",
+    label: "Modern",
     description: "DM Sans + verde forestier. Produs digital de sănătate.",
   },
-  d: {
-    id: "d",
-    label: "D · Movement & Earth",
+  vibrant: {
+    id: "vibrant",
+    label: "Vibrant",
     description: "Frank Ruhl Libre + paletă caldă. Curbe și mișcare.",
   },
 };

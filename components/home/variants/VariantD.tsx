@@ -801,7 +801,6 @@ export function VariantD() {
   return (
     <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", color: D.ink, background: D.paper, overflow: "hidden" }}>
       <style>{dFonts + dAnims}</style>
-      <NavD />
       <HeroD />
       <WhatIsD />
       <AudienceD />
@@ -811,7 +810,6 @@ export function VariantD() {
       <CommunityD />
       <TeachersD />
       <ContactD />
-      <FooterD />
     </div>
   );
 }

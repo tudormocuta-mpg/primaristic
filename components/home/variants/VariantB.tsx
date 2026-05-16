@@ -656,7 +656,6 @@ export function VariantB() {
   return (
     <div style={{ fontFamily: "'Funnel Sans', sans-serif", color: B.ink, background: B.paper, overflow: "hidden" }}>
       <style>{bFonts}</style>
-      <NavB />
       <HeroB />
       <WhatIsB />
       <StatB />
@@ -667,7 +666,6 @@ export function VariantB() {
       <CommunityB />
       <TeachersB />
       <ContactB />
-      <FooterB />
     </div>
   );
 }
