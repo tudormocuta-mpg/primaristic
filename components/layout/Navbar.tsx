@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { HomepageVariantSelector } from "@/components/home/variants/HomepageVariantSelector";
 import { localePath } from "@/lib/i18n-utils";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -62,11 +63,13 @@ export function Navbar({ locale, dict }: NavbarProps) {
               {item.label}
             </Link>
           ))}
+          <HomepageVariantSelector locale={locale} />
           <LanguageSwitcher currentLocale={locale} />
         </nav>
 
         {/* Mobile toggle */}
         <div className="flex items-center gap-2 md:hidden">
+          <HomepageVariantSelector locale={locale} />
           <LanguageSwitcher currentLocale={locale} />
           <button
             className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-secondary"
