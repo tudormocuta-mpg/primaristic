@@ -46,19 +46,13 @@ export function HomepageVariantSelector({ locale, className }: Props) {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full z-50 mt-1 min-w-[300px] overflow-hidden rounded-lg border border-border bg-card shadow-lg">
-          <div className="border-b border-border bg-muted/30 px-4 py-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Compară design-uri homepage
-          </div>
+        <div className="absolute right-0 top-full z-50 mt-1 min-w-[200px] overflow-hidden rounded-lg border border-border bg-card shadow-lg">
           <Link
             href={localePath(locale, "/")}
             onClick={() => setOpen(false)}
-            className="block border-b border-border px-4 py-3 transition-colors hover:bg-muted"
+            className="block border-b border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
           >
-            <div className="text-sm font-semibold text-foreground">Original</div>
-            <div className="mt-0.5 text-xs text-muted-foreground">
-              Homepage actual (în uz)
-            </div>
+            Original
           </Link>
           {VARIANT_IDS.map((id, idx) => {
             const meta = VARIANT_META[id];
@@ -68,14 +62,11 @@ export function HomepageVariantSelector({ locale, className }: Props) {
                 href={localePath(locale, `/varianta/${id}`)}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "block px-4 py-3 transition-colors hover:bg-muted",
+                  "block px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted",
                   idx < VARIANT_IDS.length - 1 && "border-b border-border"
                 )}
               >
-                <div className="text-sm font-semibold text-foreground">{meta.label}</div>
-                <div className="mt-0.5 text-xs text-muted-foreground">
-                  {meta.description}
-                </div>
+                {meta.label}
               </Link>
             );
           })}
